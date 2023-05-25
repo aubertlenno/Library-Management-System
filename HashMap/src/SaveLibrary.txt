@@ -5,4 +5,5 @@ P;A Ring of Endless Light;Madeleine Angel;Story;45;180
 A;Queen of the Damned;Anne Rice;Thriller;80;640
 A;Rainbow Troop;Andrea Hirata;Biography;42.75;342.0
 A;Harry Potter;JK Rowling;Fantasy;41.125;329.0
-
+A;Laskar Pelangi;Andrea Hirata;Family;5.625;45.0
+A;Bumi;Tere Liye;Action;15.0;120.0
