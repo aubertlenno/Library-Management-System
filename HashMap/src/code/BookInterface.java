@@ -1,3 +1,5 @@
+package code;
+
 import java.util.*;
 
 public interface BookInterface {
@@ -15,6 +17,4 @@ public interface BookInterface {
             System.out.println(bookList.get(i).toString());
         }
     }
-
-    void listGenre();
 }

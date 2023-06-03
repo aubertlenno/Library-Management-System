@@ -4,7 +4,7 @@ public class AudioBook extends Book {
     private double duration;
     private static double totalDuration, numOfAudio = 0;
 
-    public AudioBook(String title, String author, String genre, double duration) {
+    public AudioBook(String title, String author, String genre, double duration, String synopsis) {
         this.duration = duration;
         totalDuration += duration;
         numOfAudio++;
@@ -13,14 +13,16 @@ public class AudioBook extends Book {
         super.setAuthor(author);
         super.setGenre(genre);
         super.setCost(getCost());
+        super.setSynopsis(synopsis);
+        super.setType("Audio book");
     }
 
     public double getCost() {
-        return duration * 0.125;
+        return duration * 700;
     }
 
     public static double getAvg() {
-        return totalDuration * 0.125 / numOfAudio;
+        return totalDuration * 700 / numOfAudio;
     }
 
     public String toString() {

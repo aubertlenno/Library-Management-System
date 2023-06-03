@@ -1,7 +1,30 @@
-bookType;Insert_Title;Author_Name;Genre;cost;duration/page
-P;The Lives of the Heart;Jane Hirshfield;Fantasy;30;120
-A;The Art of Drowning;Billy Collins;Sci-Fi;50;400
-P;A Ring of Endless Light;Madeleine Angel;Story;45;180
-A;Queen of the Damned;Anne Rice;Thriller;80;640
-A;Rainbow Troop;Andrea Hirata;Biography;42.75;342.0
-A;Harry Potter;JK Rowling;Fantasy;41.125;329.0
+bookType;Insert_Title;Author_Name;Genre;cost;synopsis;duration/page
+A;Good Omens;Neil Gaiman & Terry Pratchett;Comedy;167860.0;A somewhat fussy angel and a fast-living demon collaborate to prevent the coming of the Apocalypse;9.2
+P;Ender's Game;Orson Scott Card;Science-fiction;111860.0;Ender Wiggin is drafted to the orbiting Battle School for rigorous military training;324
+A;American Gods;Neil Gaiman;Fantasy;209860.0;Shadow gets out of jail only to discover his wife is dead;19.5
+P;The Bourne Identity;Robert Ludlum;Action;111860.0;Jason Bourne is a sophisticated and deadly weapon in the hands of U.S. government;598
+P;A Song of Ice and Fire;George R. R. Martin;Fantasy;139860.0;An epic fantasy series set in a world where seasons last for years;694
+A;Die Hard;Roderick Thorp;Action;139860.0;New York cop John McClane gives terrorists a dose of their own medicine;7.5
+A;Snow Crash;Neal Stephenson;Science-fiction;153860.0;Hiro Protagonist delivers pizza for Uncle Enzo’s Cos; 8.0
+P;Dracula;Bram Stoker;Horror;97960.0;Count Dracula attempts to move from Transylvania to England;418
+P;The Hobbit;J.R.R. Tolkien;Fantasy;125860.0;Bilbo Baggins is in possession of a mysterious and magical ring;310
+A;A Confederacy of Dunces;John Kennedy Toole;Comedy;209860.0;A colorful New Orleans lifestyle is revealed through the eyes of Ignatius J. Reilly;10.0
+A;Harry Potter and the Sorcerer's Stone;J.K. Rowling;Fantasy;153860.0;An orphan boy enrolls in a school of wizardry;8.3
+P;Catch-22;Joseph Heller;Comedy;125860.0;Yossarian is a hero who is furious because thousands of people he has never met are trying to kill him;453
+A;The Dark Knight Returns;Frank Miller;Action;153860.0;Ten years after retirement, a restless Batman reemerges from the shadows;6.5
+P;The Name of the Wind;Patrick Rothfuss;Fantasy;111860.0;The tale of Kvothe, an adventurer and musician;722
+A;Rosemary's Baby;Ira Levin;Horror;153860.0;A young couple moves into an infamous New York apartment building;9.7
+A;The Catcher in the Rye;J. D. Salinger;Realistic Fiction, Coming-of-age fiction;181860.0;A story about adolescent alienation and loss of innocence, centered around the protagonist, Holden Caulfield;8.2
+P;Neuromancer;William Gibson;Science-fiction;125860.0;Case was a sharp cyber cowboy until he crossed the wrong people;271
+P;The Hitchhiker's Guide to the Galaxy;Douglas Adams;Comedy;111860.0;Seconds before Earth is demolished, Arthur Dent is plucked off the planet by a friend;224
+A;The Shining;Stephen King;Horror;167860.0;Jack Torrance sees his new job at the Overlook Hotel as a chance for a fresh start;14.5
+A;Bridget Jones's Diary;Helen Fielding;Comedy;153860.0;Bridget Jones starts her diary on New Year's Resolutions;7.4
+A;1984;George Orwell;Dystopian, political fiction, social science fiction;139860.0;A dystopian novel set in Airstrip One, formerly Great Britain, a province of the superstate Oceania;9.0
+P;To Kill a Mockingbird;Harper Lee;Southern Gothic, Bildungsroman;111860.0;The novel is renowned for its warmth and humor, despite dealing with serious issues of rape and racial inequality;384
+P;War and Peace;Leo Tolstoy;Historical novel;195860.0;The novel chronicles the French invasion of Russia and the impact of the Napoleonic era on Tsarist society through the stories of five Russian aristocratic families;1225
+A;Moby Dick;Herman Melville;Adventure, Sailor's Yarn;167860.0;The narrative of a sailor Ishmael's metaphysical journey on the Pequod, a whaling ship commanded by Captain Ahab;21.5
+P;The Great Gatsby;F. Scott Fitzgerald;Tragedy;97960.0;A 1925 novel written by American author F. Scott Fitzgerald that follows a cast of characters living in the fictional towns of West Egg and East Egg on prosperous Long Island in the summer of 1922;180
+P;Pride and Prejudice;Jane Austen;Romance;125860.0;The story charts the emotional development of the protagonist, Elizabeth Bennet, who learns the error of making hasty judgments and comes to appreciate the difference between the superficial and the essential;432
+A;Dune;Frank Herbert;Science-fiction;167860.0;Paul Atreides is just fifteen when his family accepts control of the desert planet Arrakis;21.2
+A;Infinite Jest;David Foster Wallace;Postmodernism;209860.0;A lengthy and complex work. The narrative is nonlinear and includes numerous footnotes;60.5
+A;1;2;3;3500.0;4;5.0

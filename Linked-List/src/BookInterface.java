@@ -6,7 +6,7 @@ public interface BookInterface {
     LinkedList<Book> library = new LinkedList<>();
 
     default void listTen() {
-        if (library.size() >= 10) { // 
+        if (library.size() >= 10) { //
             for (int i = library.size() - 10; i < library.size(); i++) {    // if array size is greater than 10, print recent 10
                 System.out.println(library.get(i).toString());
             }
@@ -16,7 +16,4 @@ public interface BookInterface {
             }
         }
     }
-
-    double totalCost();
-    void listGenre();
 }
