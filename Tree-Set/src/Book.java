@@ -149,15 +149,12 @@ public abstract class Book implements BookInterface, Comparable<Book> {
     }
 
     public static boolean isValidAuthor(String author){
-        boolean validAuthor = false;
         for (Book b : library) {
             if (b.getAuthor().equals(author)) {
-                validAuthor = true;
-            } else {
-                validAuthor = false;
+                return true;
             }
         }
-        return validAuthor;
+        return false;
     }
 
     public static void printAllwith(String author){
@@ -181,5 +178,45 @@ public abstract class Book implements BookInterface, Comparable<Book> {
             }
         }
         return status;
+    }
+
+    public static void loadBooksFromFile(String filename) throws IOException {
+        List<String> lines = Files.readAllLines(Paths.get(filename));
+
+        // Remove the first line
+        if (!lines.isEmpty()) {
+            lines.remove(0);
+        }
+
+        for (String line : lines) {
+            String[] details = line.split(";");
+            if (details.length != 7) {
+                System.out.println("Skipping invalid line: " + line);
+                continue;
+            }
+            String bookType = details[0];
+            String title = details[1];
+            String author = details[2];
+            String genre = details[3];
+            String cost = details[4];
+            String synopsis = details[5];
+
+            try {
+                double durationOrPage = Double.parseDouble(details[6]);
+
+                Book book;
+                if (bookType.equalsIgnoreCase("A")) {
+                    book = new AudioBook(title, author, genre, durationOrPage, synopsis);
+                } else if (bookType.equalsIgnoreCase("P")) {
+                    book = new PrintedBook(title, author, genre, (int)durationOrPage, synopsis);
+                } else {
+                    System.out.println("Unknown book type in line: " + line);
+                    continue;
+                }
+                library.add(book);
+            } catch (NumberFormatException nfe) {
+                System.out.println("Invalid number format in line: " + line);
+            }
+        }
     }
 }

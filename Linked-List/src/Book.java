@@ -3,7 +3,7 @@ package src;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Book implements BookInterface, Comparable<Book> {
@@ -19,8 +19,8 @@ public abstract class Book implements BookInterface, Comparable<Book> {
     private static double totalCost;
 
     // book genre data tracker
-    static LinkedList<String> genreList = new LinkedList<>(); // stores all recorded genres
-    static LinkedList<Integer> genreCount = new LinkedList<>(); // array that counts the corresponding genre above
+    static ArrayList<String> genreList = new ArrayList<>(); // stores all recorded genres
+    static ArrayList<Integer> genreCount = new ArrayList<>(); // array that counts the corresponding genre above
 
     // setters
     public void setTitle(String title) {
@@ -83,7 +83,7 @@ public abstract class Book implements BookInterface, Comparable<Book> {
             }
         }
         if (genrePresent) {
-            LinkedList<Integer> tempGenreCount = new LinkedList<>();
+            ArrayList<Integer> tempGenreCount = new ArrayList<>();
             for (int index = 0; index < genreList.size(); index++) {
                 if (genreList.get(index).equals(genre)) {
                     tempGenreCount.add(genreCount.get(index) + 1);
@@ -186,5 +186,45 @@ public abstract class Book implements BookInterface, Comparable<Book> {
             }
         }
         return status;
+    }
+
+    public static void loadBooksFromFile(String filename) throws IOException {
+        List<String> lines = Files.readAllLines(Paths.get(filename));
+
+        // Remove the first line
+        if (!lines.isEmpty()) {
+            lines.remove(0);
+        }
+
+        for (String line : lines) {
+            String[] details = line.split(";");
+            if (details.length != 7) {
+                System.out.println("Skipping invalid line: " + line);
+                continue;
+            }
+            String bookType = details[0];
+            String title = details[1];
+            String author = details[2];
+            String genre = details[3];
+            String cost = details[4];
+            String synopsis = details[5];
+
+            try {
+                double durationOrPage = Double.parseDouble(details[6]);
+
+                Book book;
+                if (bookType.equalsIgnoreCase("A")) {
+                    book = new AudioBook(title, author, genre, durationOrPage, synopsis);
+                } else if (bookType.equalsIgnoreCase("P")) {
+                    book = new PrintedBook(title, author, genre, (int)durationOrPage, synopsis);
+                } else {
+                    System.out.println("Unknown book type in line: " + line);
+                    continue;
+                }
+                library.add(book);
+            } catch (NumberFormatException nfe) {
+                System.out.println("Invalid number format in line: " + line);
+            }
+        }
     }
 }

@@ -3,7 +3,7 @@ package src;
 import java.util.*;
 
 public interface BookInterface {
-    TreeSet<Book> library = new TreeSet<Book>();
+    TreeSet<Book> library = new TreeSet<>();
 
     static void listTen() {
         Iterator<Book> itr = library.iterator();

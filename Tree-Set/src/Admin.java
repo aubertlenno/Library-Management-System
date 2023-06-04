@@ -47,7 +47,8 @@ public class Admin {
                     "6) Print list of all recorded genres\n" +
                     "7) Print total cost of your library\n" +
                     "8) Create new admin\n" +
-                    "9) Exit to main menu");
+                    "9) Delete a book\n" +
+                    "10) Exit to main menu");
 
             int command = input.nextInt();
             Scanner scn = new Scanner(System.in);
@@ -113,18 +114,15 @@ public class Admin {
                     long endTime2 = System.nanoTime();
                     long elapsedTime2 = endTime2 - startTime2;
                     System.out.println("Book added successfully, time taken: " + elapsedTime2 + "ns");
-
-                    clearConsole();
+                    
                     break;
 
                 case 3:
                     System.out.println(money.format(AudioBook.getAvg()));
-                    clearConsole();
                     break;
 
                 case 4:
                     System.out.println(money.format(PrintedBook.getAvg()));
-                    clearConsole();
                     break;
 
                 case 5:
@@ -167,17 +165,14 @@ public class Admin {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    clearConsole();
                     break;
 
                 case 6:
                     Book.listGenre();
-                    clearConsole();
                     break;
 
                 case 7:
                     System.out.println(money.format(Book.totalCost()));
-                    clearConsole();
                     break;
 
                 case 8:
@@ -190,10 +185,15 @@ public class Admin {
 
                     Admin newAdmin = new Admin(usrInpt, passInpt);
                     newAdmin.addToList();
-                    clearConsole();
                     break;
 
                 case 9:
+                    System.out.println("Insert title of the book to delete:");
+                    String titleToDelete = scn.nextLine();
+                    deleteBook(titleToDelete);
+                    break;
+
+                case 10:
                     System.out.println("Exit program? (Y/N)");
                     String yesno = input.next();
                     if (yesno.compareTo("Y") == 0 || yesno.compareTo("y") == 0) {
@@ -202,8 +202,8 @@ public class Admin {
                     }
                     break;
             }
-            out.close();
         }
+        out.close();
     }
 
     public void addToList() throws IOException {
@@ -225,6 +225,68 @@ public class Admin {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void deleteBook(String bookTitle) {
+        File inputFile = new File("src/SaveLibrary.txt");
+
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new FileReader(inputFile));
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred while trying to open the file.");
+            e.printStackTrace();
+        }
+
+        // Buffer for storing the modified contents
+        StringBuilder contents = new StringBuilder();
+
+        try {
+            String currentLine;
+            while ((currentLine = reader.readLine()) != null) {
+                String trimmedLine = currentLine.trim();
+                String[] bookDetails = trimmedLine.split(";");
+                if(bookDetails.length > 1 && bookDetails[1].equals(bookTitle)) continue;
+                contents.append(currentLine).append(System.getProperty("line.separator"));
+            }
+
+            reader.close();
+
+            // Overwrite the original file
+            BufferedWriter writer = new BufferedWriter(new FileWriter(inputFile));
+            writer.write(contents.toString());
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred while reading or writing the file.");
+            e.printStackTrace();
+        }
+
+        // Remove book from the TreeSet
+        Iterator<Book> iterator = BookInterface.library.iterator();
+        while (iterator.hasNext()) {
+            Book book = iterator.next();
+            if (book.getTitle().equals(bookTitle)) {
+                iterator.remove();
+                break;
+            }
+        }
+    }
+
+    public void addBooksAutomatically(int numOfBooks) throws IOException {
+        FileWriter fw = new FileWriter("src/SaveLibraryBenchmark.txt", true);
+        PrintWriter out = new PrintWriter(fw);
+        for (int i = 0; i < numOfBooks; i++) {
+            String title = "Book" + (i + 1);
+            String author = "Author" + (i + 1);
+            String genre = "Genre" + (i + 1);
+            String synopsis = "Synopsis" + (i + 1);
+            int page = 100;
+
+            Book entry = new PrintedBook(title, author, genre, page, synopsis);
+            out.println(entry.toString());
+            BookInterface.library.add(entry);
+        }
+        out.close();
     }
 
     public static void adminLogin() throws IOException {

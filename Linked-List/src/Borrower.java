@@ -205,6 +205,19 @@ public class Borrower {
         }
     }
 
+    public void getBookBenchmark(String title) throws IOException {
+        boolean found = false;
+        for (Book book : BookInterface.library) {
+            if (book.getTitle().equals(title)) {
+                System.out.println("Found!");
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("Not found!");
+        }
+    }
 
     public void userMenu() throws IOException {
         boolean repeat2 = true;

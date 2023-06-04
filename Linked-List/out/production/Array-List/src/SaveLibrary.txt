@@ -1,11 +1,10 @@
 bookType;Insert_Title;Author_Name;Genre;cost;synopsis;duration/page
-A;Good Omens;Neil Gaiman & Terry Pratchett;Comedy;167860.0;A somewhat fussy angel and a fast-living demon collaborate to prevent the coming of the Apocalypse;9.2
-P;Ender's Game;Orson Scott Card;Science-fiction;111860.0;Ender Wiggin is drafted to the orbiting Battle School for rigorous military training;324
+P;Ender's Game;Orson Scott Card;Science Fiction;111860.0;Ender Wiggin is drafted to the orbiting Battle School for rigorous military training;324
 A;American Gods;Neil Gaiman;Fantasy;209860.0;Shadow gets out of jail only to discover his wife is dead;19.5
 P;The Bourne Identity;Robert Ludlum;Action;111860.0;Jason Bourne is a sophisticated and deadly weapon in the hands of U.S. government;598
 P;A Song of Ice and Fire;George R. R. Martin;Fantasy;139860.0;An epic fantasy series set in a world where seasons last for years;694
 A;Die Hard;Roderick Thorp;Action;139860.0;New York cop John McClane gives terrorists a dose of their own medicine;7.5
-A;Snow Crash;Neal Stephenson;Science-fiction;153860.0;Hiro Protagonist delivers pizza for Uncle Enzo’s Cos; 8.0
+A;Snow Crash;Neal Stephenson;Science Fiction;153860.0;Hiro Protagonist delivers pizza for Uncle Enzo’s Cos; 8.0
 P;Dracula;Bram Stoker;Horror;97960.0;Count Dracula attempts to move from Transylvania to England;418
 P;The Hobbit;J.R.R. Tolkien;Fantasy;125860.0;Bilbo Baggins is in possession of a mysterious and magical ring;310
 A;A Confederacy of Dunces;John Kennedy Toole;Comedy;209860.0;A colorful New Orleans lifestyle is revealed through the eyes of Ignatius J. Reilly;10.0
@@ -14,17 +13,35 @@ P;Catch-22;Joseph Heller;Comedy;125860.0;Yossarian is a hero who is furious beca
 A;The Dark Knight Returns;Frank Miller;Action;153860.0;Ten years after retirement, a restless Batman reemerges from the shadows;6.5
 P;The Name of the Wind;Patrick Rothfuss;Fantasy;111860.0;The tale of Kvothe, an adventurer and musician;722
 A;Rosemary's Baby;Ira Levin;Horror;153860.0;A young couple moves into an infamous New York apartment building;9.7
-A;The Catcher in the Rye;J. D. Salinger;Realistic Fiction, Coming-of-age fiction;181860.0;A story about adolescent alienation and loss of innocence, centered around the protagonist, Holden Caulfield;8.2
-P;Neuromancer;William Gibson;Science-fiction;125860.0;Case was a sharp cyber cowboy until he crossed the wrong people;271
+A;The Catcher in the Rye;J. D. Salinger;Realistic Fiction;181860.0;A story about adolescent alienation and loss of innocence, centered around the protagonist, Holden Caulfield;8.2
+P;Neuromancer;William Gibson;Science Fiction;125860.0;Case was a sharp cyber cowboy until he crossed the wrong people;271
 P;The Hitchhiker's Guide to the Galaxy;Douglas Adams;Comedy;111860.0;Seconds before Earth is demolished, Arthur Dent is plucked off the planet by a friend;224
 A;The Shining;Stephen King;Horror;167860.0;Jack Torrance sees his new job at the Overlook Hotel as a chance for a fresh start;14.5
 A;Bridget Jones's Diary;Helen Fielding;Comedy;153860.0;Bridget Jones starts her diary on New Year's Resolutions;7.4
-A;1984;George Orwell;Dystopian, political fiction, social science fiction;139860.0;A dystopian novel set in Airstrip One, formerly Great Britain, a province of the superstate Oceania;9.0
-P;To Kill a Mockingbird;Harper Lee;Southern Gothic, Bildungsroman;111860.0;The novel is renowned for its warmth and humor, despite dealing with serious issues of rape and racial inequality;384
-P;War and Peace;Leo Tolstoy;Historical novel;195860.0;The novel chronicles the French invasion of Russia and the impact of the Napoleonic era on Tsarist society through the stories of five Russian aristocratic families;1225
-A;Moby Dick;Herman Melville;Adventure, Sailor's Yarn;167860.0;The narrative of a sailor Ishmael's metaphysical journey on the Pequod, a whaling ship commanded by Captain Ahab;21.5
+A;1984;George Orwell;Dystopian;139860.0;A dystopian novel set in Airstrip One, formerly Great Britain, a province of the superstate Oceania;9.0
+P;To Kill a Mockingbird;Harper Lee;Southern Gothic;111860.0;The novel is renowned for its warmth and humor, despite dealing with serious issues of rape and racial inequality;384
+P;War and Peace;Leo Tolstoy;Historical Novel;195860.0;The novel chronicles the French invasion of Russia and the impact of the Napoleonic era on Tsarist society through the stories of five Russian aristocratic families;1225
+A;Moby Dick;Herman Melville;Adventure;167860.0;The narrative of a sailor Ishmael's metaphysical journey on the Pequod, a whaling ship commanded by Captain Ahab;21.5
 P;The Great Gatsby;F. Scott Fitzgerald;Tragedy;97960.0;A 1925 novel written by American author F. Scott Fitzgerald that follows a cast of characters living in the fictional towns of West Egg and East Egg on prosperous Long Island in the summer of 1922;180
 P;Pride and Prejudice;Jane Austen;Romance;125860.0;The story charts the emotional development of the protagonist, Elizabeth Bennet, who learns the error of making hasty judgments and comes to appreciate the difference between the superficial and the essential;432
-A;Dune;Frank Herbert;Science-fiction;167860.0;Paul Atreides is just fifteen when his family accepts control of the desert planet Arrakis;21.2
+A;Dune;Frank Herbert;Science Fiction;167860.0;Paul Atreides is just fifteen when his family accepts control of the desert planet Arrakis;21.2
 A;Infinite Jest;David Foster Wallace;Postmodernism;209860.0;A lengthy and complex work. The narrative is nonlinear and includes numerous footnotes;60.5
+A;The Secret Garden;Frances Hodgson Burnett;Children's;120860.0;A young girl discovers a hidden garden and its transformative powers;7.5
+P;The Art of War;Sun Tzu;Nonfiction;99060.0;An ancient Chinese treatise on military strategy and leadership;88
+A;The Joy Luck Club;Amy Tan;Contemporary Fiction;139860.0;The stories of four Chinese immigrant women and their American-born daughters;12.6
+P;The Catcher in the Rye;J.D. Salinger;Coming-of-Age;115860.0;Holden Caulfield's rebellious journey through teenage angst and disillusionment;275
+A;The Girl with the Pearl Earring;Tracy Chevalier;Historical Fiction;142860.0;The imagined story behind the famous Vermeer painting;10.4
+P;The Outsiders;S.E. Hinton;Young Adult;85860.0;The rivalry between two groups of teenagers from different social classes;180
+A;The Help;Kathryn Stockett;Historical Fiction;176860.0;A young white woman writes a book exposing racial discrimination in 1960s Mississippi;18.2
+P;The Road;Cormac McCarthy;Post-Apocalyptic;125860.0;A father and son journey through a desolate wasteland in search of survival;287
+A;The Chronicles of Narnia;C.S. Lewis;Fantasy;223860.0;The adventures of children in a magical land filled with talking animals and mythical creatures;35.8
+P;The Picture of Dorian Gray;Oscar Wilde;Gothic;103860.0;The story of a man who remains eternally youthful while a portrait of him ages;238
+A;The Da Vinci Code;Dan Brown;Mystery;195860.0;A symbologist and a cryptologist on a quest to uncover a secret guarded for centuries;6.8
+P;The Lord of the Rings;J.R.R. Tolkien;Fantasy;195860.0;A hobbit named Frodo Baggins embarks on a perilous journey to destroy a powerful ring;1470
+P;1;2;3;5000.0;4;5
 A;1;2;3;3500.0;4;5.0
+P;1;2;1;1000.0;2;1
+A;9;9;9;6300.0;9;9.0
+P;9;9;9;9000.0;9;9
+A;7;7;7;4900.0;7;7.0
+P;7;7;7;8000.0;8;8

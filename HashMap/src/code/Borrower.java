@@ -150,27 +150,26 @@ public class Borrower {
         }
     }
 
-    public void getBook(String title, String type) throws IOException {
+    public void getBookBenchmark(String title) throws IOException {
+        if (BookInterface.library.containsKey(title)) { // Retrieve the actual book using floor method
+            System.out.println("Found!");
+        } else {
+            System.out.println("Not found!");
+        }
+    }
+
+    public void getBook(String title) throws IOException {
+
         Scanner in = new Scanner(System.in);
+        Book foundBook = BookInterface.library.get(title);
+        if (foundBook != null) {
 
-        if (type.equalsIgnoreCase("A") || type.equalsIgnoreCase("P")) {
-            long startTime = System.nanoTime();
-            Book foundbook = BookInterface.library.get(title);
-            long endTime = System.nanoTime();
-            long elapsedTime = (endTime - startTime);
-            System.out.println("This book was retrieved in " + elapsedTime + "ns\n");
-
-            if (foundbook == null) {
-                System.out.println("Sorry, we currently do not have this book in our catalogue");
-                return;
-            }
-
-            foundbook.printBookDets();
-            System.out.println("\n" + "Borrow? (Y/N)");
+            foundBook.printBookDets();
+            System.out.println("\nBorrow? (Y/N)");
             String yesno = in.nextLine();
 
             if (yesno.equalsIgnoreCase("Y")) {
-                this.borrowBook(foundbook);
+                this.borrowBook(foundBook);
             }
         } else {
             System.out.println("Sorry, we currently do not have this book in our catalogue");
@@ -210,9 +209,7 @@ public class Borrower {
                             Book.showBooks();
                             System.out.println("Enter the title of the book you want to borrow: ");
                             String inpt = in.nextLine();
-                            System.out.println("Is it an audiobook or printed book? (A/P)");
-                            String inpt2 = in.nextLine();
-                            this.getBook(inpt, inpt2);
+                            this.getBook(inpt);
                             break;
 
                         case 2:
@@ -223,9 +220,7 @@ public class Borrower {
                             Book.printAllin(genreChosen);
                             System.out.println("Enter the title of the book you want to borrow: ");
                             String titleFromGenre = in.nextLine();
-                            System.out.println("Is it an audiobook or printed book? (A/P)");
-                            String typeFromGenre = in.nextLine();
-                            this.getBook(titleFromGenre, typeFromGenre);
+                            this.getBook(titleFromGenre);
                             code.Admin.clearConsole();
                             break;
 
@@ -238,9 +233,7 @@ public class Borrower {
                                 Book.printAllwith(authorIn);
                                 System.out.println("Enter the title of the book you want to borrow: ");
                                 String titleFromAuthor = in.nextLine();
-                                System.out.println("Is it an audiobook or printed book? (A/P)");
-                                String typeFromAuthor = in.nextLine();
-                                this.getBook(titleFromAuthor, typeFromAuthor);
+                                this.getBook(titleFromAuthor);
                             } else {
                                 System.out.println("Sorry, we currently don't have books written by " + authorIn);
                             }
@@ -249,9 +242,7 @@ public class Borrower {
                         case 4:
                             System.out.println("Enter the title of the book you are looking for: ");
                             String titleSearch = in.nextLine();
-                            System.out.println("Is it an audiobook or printed book? (A/P)");
-                            String typeFromSearch = in.nextLine();
-                            this.getBook(titleSearch, typeFromSearch);
+                            this.getBook(titleSearch);
                             break;
                     }
                     break;
