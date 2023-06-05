@@ -1,6 +1,8 @@
 package code;
 
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Benchmark {
@@ -76,15 +78,20 @@ public class Benchmark {
 
                 long startTime = System.nanoTime();
 
-                for (int i = 0; i < numberOfBooks; i++) {
-                    String titleToDelete = (String) BookInterface.library.keySet().toArray()[0]; // delete the first book in the library
-                    admin.deleteBook(titleToDelete);
+                Iterator<Map.Entry<String, Book>> iterator = BookInterface.library.entrySet().iterator();
+                int booksDeleted = 0;
+
+                while (iterator.hasNext() && booksDeleted < numberOfBooks) {
+                    Map.Entry<String, Book> entry = iterator.next();
+                    iterator.remove();
+                    booksDeleted++;
                 }
 
                 long endTime = System.nanoTime();
                 long elapsedTime = endTime - startTime;
 
                 System.out.println("Books deleted successfully, time taken: " + elapsedTime + "ns");
+
 
                 break;
 
