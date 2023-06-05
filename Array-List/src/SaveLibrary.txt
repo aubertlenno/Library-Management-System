@@ -38,10 +38,3 @@ A;The Chronicles of Narnia;C.S. Lewis;Fantasy;223860.0;The adventures of childre
 P;The Picture of Dorian Gray;Oscar Wilde;Gothic;103860.0;The story of a man who remains eternally youthful while a portrait of him ages;238
 A;The Da Vinci Code;Dan Brown;Mystery;195860.0;A symbologist and a cryptologist on a quest to uncover a secret guarded for centuries;6.8
 P;The Lord of the Rings;J.R.R. Tolkien;Fantasy;195860.0;A hobbit named Frodo Baggins embarks on a perilous journey to destroy a powerful ring;1470
-P;1;2;3;5000.0;4;5
-A;1;2;3;3500.0;4;5.0
-P;1;2;1;1000.0;2;1
-A;9;9;9;6300.0;9;9.0
-P;9;9;9;9000.0;9;9
-A;7;7;7;4900.0;7;7.0
-P;7;7;7;8000.0;8;8

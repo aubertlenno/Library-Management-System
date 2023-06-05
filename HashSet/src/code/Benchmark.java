@@ -108,7 +108,7 @@ public class Benchmark {
                 Borrower borrower = new Borrower("Franz", "Fr123");
 
                 // The book title you want to search for
-                String title = "The Lord of the Rings";
+                String title = "Moby Dick";
 
                 // Capture the start time
                 long startTime2 = System.nanoTime();

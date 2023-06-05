@@ -151,7 +151,7 @@ public class Borrower {
     }
 
     public void getBookBenchmark(String title) throws IOException {
-        if (BookInterface.library.containsKey(title)) { // Retrieve the actual book using floor method
+        if (BookInterface.library.containsKey(title)) {
             System.out.println("Found!");
         } else {
             System.out.println("Not found!");

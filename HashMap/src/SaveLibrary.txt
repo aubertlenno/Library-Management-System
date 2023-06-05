@@ -1,5 +1,4 @@
 bookType;Insert_Title;Author_Name;Genre;cost;synopsis;duration/page
-A;Good Omens;Neil Gaiman & Terry Pratchett;Comedy;167860.0;A somewhat fussy angel and a fast-living demon collaborate to prevent the coming of the Apocalypse;9.2
 P;Ender's Game;Orson Scott Card;Science Fiction;111860.0;Ender Wiggin is drafted to the orbiting Battle School for rigorous military training;324
 A;American Gods;Neil Gaiman;Fantasy;209860.0;Shadow gets out of jail only to discover his wife is dead;19.5
 P;The Bourne Identity;Robert Ludlum;Action;111860.0;Jason Bourne is a sophisticated and deadly weapon in the hands of U.S. government;598
