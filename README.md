@@ -35,12 +35,12 @@ We used 5 data structures:
 
 ### Screenshots
 
-![home](img\home.png)
+![home](img/home.png)
 
 
 
-![admin-menu](img\admin-menu.png)
+![admin-menu](img/admin-menu.png)
 
 
 
-![borrower-menu](img\borrower-menu.png)
+![borrower-menu](img/borrower-menu.png)
