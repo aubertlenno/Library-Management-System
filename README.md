@@ -4,9 +4,9 @@ Team Member:
 
 Lenno Aubert Hartono - 2602116983
 
-Gde Ngurah Randy Agastya - 
+Gde Ngurah Randy Agastya - 2602119165
 
-Francesco Emmanuel Setiawan - 
+Francesco Emmanuel Setiawan - 2602209620
 
 
 
