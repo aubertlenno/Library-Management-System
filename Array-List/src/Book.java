@@ -120,15 +120,6 @@ public abstract class Book implements BookInterface, Comparable<Book> {
         return title + ";" + author + ";" + genre + ";" + cost + ";" + synopsis;
     }
 
-    public static Book findBook(String title) {
-        for (Book book : BookInterface.library) {
-            if (book.getTitle().equalsIgnoreCase(title)) {
-                return book;
-            }
-        }
-        return null; // book not found
-    }
-
     public static void showBooks() {
         int i = 1;
         for (Book b : BookInterface.library) {

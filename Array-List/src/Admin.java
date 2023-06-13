@@ -31,11 +31,11 @@ public class Admin {
     public void AdminMenu() throws IOException {
         NumberFormat money = NumberFormat.getCurrencyInstance();
         Scanner input = new Scanner(System.in);
-        FileWriter fw = new FileWriter("src/SaveLibrary.txt", true);
-        PrintWriter out = new PrintWriter(fw);
         boolean menuRepeat = true;
 
         while (menuRepeat) {
+            FileWriter fw = new FileWriter("src/SaveLibrary.txt", true);
+            PrintWriter out = new PrintWriter(fw);
             System.out.println("Welcome " + this.getUsername() + "!\n\n" +
                     "========== MAIN MENU ==========\n" +
                     "Please select a command:\n" +
@@ -96,11 +96,6 @@ public class Admin {
 
                     Book entry2 = new PrintedBook(title2, author2, genre2, page, synopsis2);
                     out.println(entry2.toString());
-                    Iterator<Book> iterator2 = BookInterface.library.iterator();
-                    while (iterator2.hasNext()) {
-                        Book book = iterator2.next();
-                        // Perform necessary checks or modifications on the book
-                    }
                     BookInterface.library.add(entry2);
                     System.out.println("Book added successfully");
 
@@ -191,8 +186,9 @@ public class Admin {
                     }
                     break;
             }
+            out.close();
         }
-        out.close();
+
     }
 
     public void addToList() throws IOException {
@@ -267,7 +263,7 @@ public class Admin {
             e.printStackTrace();
         }
 
-        // Remove book from the TreeSet
+
         Iterator<Book> iterator = BookInterface.library.iterator();
         while (iterator.hasNext()) {
             Book book = iterator.next();

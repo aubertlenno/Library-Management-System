@@ -31,11 +31,11 @@ public class Admin {
     public void AdminMenu() throws IOException {
         NumberFormat money = NumberFormat.getCurrencyInstance();
         Scanner input = new Scanner(System.in);
-        FileWriter fw = new FileWriter("src/SaveLibrary.txt", true);
-        PrintWriter out = new PrintWriter(fw);
         boolean menuRepeat = true;
 
         while (menuRepeat) {
+            FileWriter fw = new FileWriter("src/SaveLibrary.txt", true);
+            PrintWriter out = new PrintWriter(fw);
             System.out.println("Welcome " + this.getUsername() + "!\n\n" +
                     "========== MAIN MENU ==========\n" +
                     "Please select a command:\n" +
@@ -202,8 +202,8 @@ public class Admin {
                     }
                     break;
             }
+            out.close();
         }
-        out.close();
     }
 
     public void addToList() throws IOException {
@@ -227,49 +227,19 @@ public class Admin {
         }
     }
 
-    public void deleteBook(String bookTitle) {
-        File inputFile = new File("src/SaveLibrary.txt");
-
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new FileReader(inputFile));
-        } catch (FileNotFoundException e) {
-            System.out.println("An error occurred while trying to open the file.");
-            e.printStackTrace();
-        }
-
-        // Buffer for storing the modified contents
-        StringBuilder contents = new StringBuilder();
-
-        try {
-            String currentLine;
-            while ((currentLine = reader.readLine()) != null) {
-                String trimmedLine = currentLine.trim();
-                String[] bookDetails = trimmedLine.split(";");
-                if(bookDetails.length > 1 && bookDetails[1].equals(bookTitle)) continue;
-                contents.append(currentLine).append(System.getProperty("line.separator"));
-            }
-
-            reader.close();
-
-            // Overwrite the original file
-            BufferedWriter writer = new BufferedWriter(new FileWriter(inputFile));
-            writer.write(contents.toString());
-            writer.close();
-        } catch (IOException e) {
-            System.out.println("An error occurred while reading or writing the file.");
-            e.printStackTrace();
-        }
-
-        // Remove book from the TreeSet
-        Iterator<Book> iterator = BookInterface.library.iterator();
-        while (iterator.hasNext()) {
-            Book book = iterator.next();
-            if (book.getTitle().equals(bookTitle)) {
-                iterator.remove();
-                break;
+    public boolean deleteBook(String title) {
+        Iterator<Book> it = BookInterface.library.iterator();
+        while (it.hasNext()) {
+            if (it.next().getTitle().equals(title)) {
+                it.remove();
+                return true; // book found and removed
             }
         }
+        return false; // book not found
+    }
+
+    public void deleteFirstBook() {
+        BookInterface.library.pollFirst();
     }
 
     public void addBooksAutomatically(int numOfBooks) throws IOException {

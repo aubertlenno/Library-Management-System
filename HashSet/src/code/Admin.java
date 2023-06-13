@@ -31,11 +31,11 @@ public class Admin {
     public void AdminMenu() throws IOException {
         NumberFormat money = NumberFormat.getCurrencyInstance();
         Scanner input = new Scanner(System.in);
-        FileWriter fw = new FileWriter("src/SaveLibrary.txt", true);
-        PrintWriter out = new PrintWriter(fw);
         boolean menuRepeat = true;
 
         while (menuRepeat) {
+            FileWriter fw = new FileWriter("src/SaveLibrary.txt", true);
+            PrintWriter out = new PrintWriter(fw);
             System.out.println("Welcome " + this.getUsername() + "!\n\n" +
                     "========== MAIN MENU ==========\n" +
                     "Please select a command:\n" +
@@ -188,8 +188,8 @@ public class Admin {
                     }
                     break;
             }
+            out.close();
         }
-        out.close();
     }
 
     public void addToList() throws IOException {

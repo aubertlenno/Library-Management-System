@@ -37,4 +37,6 @@ P;The Road;Cormac McCarthy;Post-Apocalyptic;125860.0;A father and son journey th
 A;The Chronicles of Narnia;C.S. Lewis;Fantasy;223860.0;The adventures of children in a magical land filled with talking animals and mythical creatures;35.8
 P;The Picture of Dorian Gray;Oscar Wilde;Gothic;103860.0;The story of a man who remains eternally youthful while a portrait of him ages;238
 A;The Da Vinci Code;Dan Brown;Mystery;195860.0;A symbologist and a cryptologist on a quest to uncover a secret guarded for centuries;6.8
-P;The Lord of the Rings;J.R.R. Tolkien;Fantasy;195860.0;A hobbit named Frodo Baggins embarks on a perilous journey to destroy a powerful ring;1470
+A;123;231;321;86100.0;4123;123.0
+A;Laskar Pelangi;Andrea Hirata;Drama;28000.0;Novel ini bercerita tentang kehidupan 10 anak dari keluarga miskin yang bersekolah (SD dan SMP) di sebuah sekolah Muhammadiyah di Belitung yang penuh dengan keterbatasan.;40.0
+A;1;2;3;3500.0;4;5.0

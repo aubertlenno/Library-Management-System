@@ -73,11 +73,14 @@ public class Benchmark {
 
                 System.out.println("Deleting " + numberOfBooks + " books...");
 
+                // Other code remains the same...
+
                 long startTime = System.nanoTime();
 
                 for (int i = 0; i < numberOfBooks; i++) {
                     if (!BookInterface.library.isEmpty()) {
-                        String bookTitleToDelete = BookInterface.library.get(0).getTitle(); // get the title of the first book in the library
+                        int middleIndex = BookInterface.library.size() / 2; // get the middle index
+                        String bookTitleToDelete = BookInterface.library.get(middleIndex).getTitle(); // get the title of the book at the middle index
                         admin.deleteBook(bookTitleToDelete);
                     } else {
                         System.out.println("The library is empty. No more books to delete.");
@@ -89,6 +92,8 @@ public class Benchmark {
                 long elapsedTime = endTime - startTime;
 
                 System.out.println("Books deleted successfully, time taken: " + elapsedTime + "ns");
+
+
 
                 break;
 

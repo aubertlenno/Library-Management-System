@@ -10,9 +10,6 @@ public abstract class Book implements BookInterface {
     private double cost;
     private boolean isAudioBook;
 
-    public int compareTo(Book other) {
-        return this.title.compareTo(other.title);
-    }
     private static double totalCost;
 
     // book genre data tracker

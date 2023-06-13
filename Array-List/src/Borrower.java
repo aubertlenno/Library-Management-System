@@ -155,7 +155,6 @@ public class Borrower {
         Scanner in = new Scanner(System.in);
 
         if (type.equalsIgnoreCase("A")) {
-            long startTime = System.nanoTime();
             Book foundbook = null;
             for (Book book : BookInterface.library) {
                 if (book.getTitle().equalsIgnoreCase(title) && book instanceof AudioBook) {
@@ -163,10 +162,7 @@ public class Borrower {
                     break;
                 }
             }
-            long endTime = System.nanoTime();
-            long elapsedTime = (endTime - startTime);
             if (foundbook != null) {
-                System.out.println("This book was retrieved in " + elapsedTime + "ns\n");
                 foundbook.printBookDets();
                 System.out.println("\n" + "Borrow? (Y/N)");
                 String yesno = in.nextLine();
@@ -178,7 +174,6 @@ public class Borrower {
                 System.out.println("Sorry, we currently do not have this audiobook in our catalogue");
             }
         } else if (type.equalsIgnoreCase("P")) {
-            long startTime = System.nanoTime();
             Book foundbook = null;
             for (Book book : BookInterface.library) {
                 if (book.getTitle().equalsIgnoreCase(title) && book instanceof PrintedBook) {
@@ -186,10 +181,7 @@ public class Borrower {
                     break;
                 }
             }
-            long endTime = System.nanoTime();
-            long elapsedTime = (endTime - startTime);
             if (foundbook != null) {
-                System.out.println("This book was retrieved in " + elapsedTime + "ns\n");
                 foundbook.printBookDets();
                 System.out.println("\n" + "Borrow? (Y/N)");
                 String yesno = in.nextLine();

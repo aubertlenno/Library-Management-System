@@ -93,7 +93,6 @@ public class Benchmark {
 
                 System.out.println("Books deleted successfully, time taken: " + elapsedTime + "ns");
 
-
                 break;
 
             case 3:
