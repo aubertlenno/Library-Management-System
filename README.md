@@ -24,7 +24,7 @@ We used 5 data structures:
 
 ### How to run?
 
-1. Click here to download the resources
+1. [Click here](https://github.com/aubertlenno/MOSHI-Library-System/archive/refs/heads/main.zip) to download the resources
 2. Unzip the folder
 3. Open the unzipped folder
 4. Right click on any data structure folder
